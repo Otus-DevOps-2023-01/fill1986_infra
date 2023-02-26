@@ -1,14 +1,11 @@
 # fill1986_infra
 fill1986 Infra repository
 
-##Task: Исследовать способ подключения к someinternalhost в одну 
-#команду из вашего рабочего устройства:
+#Task: Исследовать способ подключения к someinternalhost в одну команду из вашего рабочего устройства:
 ssh -i .ssh/appuser -J appuser@158.160.36.85 appuser@10.129.0.23
 
-##Additional task: Предложить вариант решения для подключения из консоли при помощи
-#команды вида ssh someinternalhost (по алиасу):
-Редвактируем - config ~/.ssh.config:
-### First jump host. Directly reacheble
+#Additional task: Предложить вариант решения для подключения из консоли при помощи команды вида ssh someinternalhost (по алиасу):
+Редактируем - config ~/.ssh.config:
 Host bastion
     HostName 158.160.36.85
     IdentityFile ~/.ssh/appuser
