@@ -1,0 +1,5 @@
+{
+    "token": "{{env `YC_TOKEN`}}",
+    "folder_id": "{{env `YC_FOLDER`}}",
+    "service_account_key_file": "./key.json.exmple"
+}
