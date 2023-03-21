@@ -1,15 +1,10 @@
-{   "variables":
-    {
-        "token": "{{env `YC_TOKEN`}}",
-        "folder_id": "{{env `YC_FOLDER`}}",
-        "service_account_key_file": "./key.json"
-    },
+{   
     "builders": [
         {
             "type": "yandex",   
             "service_account_key_file": "{{user `service_account_key_file`}}",
-            "folder_id": "b1gg93llc2g1rn01q1ar",
-            "source_image_family": "ubuntu-1604-lts",
+            "folder_id": "{{user `folder_id`}}",
+            "source_image_family": "{{user `source_image_family`}}",
             "image_name": "reddit-base-{{timestamp}}",
             "image_family": "reddit-base",
             "image_description": "Ubuntu with Ryby and MongoDB",
