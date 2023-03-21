@@ -3,6 +3,6 @@
    "service_account_id": "ajehuuh90i83bjun7pe5",
    "created_at": "2023-03-04T10:35:25.082074011Z",
    "key_algorithm": "RSA_2048",
-   "public_key": "-----BEGIN PUBLIC KEY-----\ajehuuh90i83bjun7pe5\n-----END PUBLIC KEY-----\n",
-   "private_key": "-----BEGIN PRIVATE KEY-----\ajehuuh90i83bjun7pe5\n-----END PRIVATE KEY-----\n"
+   "public_key": "-----BEGIN PUBLIC KEY-----\\n-----END PUBLIC KEY-----\n",
+   "private_key": "-----BEGIN PRIVATE KEY-----\\n-----END PRIVATE KEY-----\n"
 }
