@@ -1,5 +1,0 @@
-{
-    "source_image_family": "ubuntu-1604-lts",
-    "folder_id": "value_folder_id",
-    "service_account_key_file": "./keys.json.example"
-}
