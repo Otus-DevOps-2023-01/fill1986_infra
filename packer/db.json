@@ -23,8 +23,7 @@
             "type": "shell",
             "script": "scripts/install_mongodb.sh",
             "execute_command": "sudo {{.Path}}",
-            "pause_before": "20s",
-            "max_retries": 2
+            "pause_before": "20s"
         }
     ]
 }
