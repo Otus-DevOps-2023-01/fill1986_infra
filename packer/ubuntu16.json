@@ -1,5 +1,3 @@
-
-
 {   "variables":
     {
         "token": "{{env `YC_TOKEN`}}",
