@@ -7,6 +7,7 @@
 #  required_version = ">= 0.13"
 #}
 
+
 resource "yandex_compute_instance" "db" {
   name = "reddit-db"
   labels = {
