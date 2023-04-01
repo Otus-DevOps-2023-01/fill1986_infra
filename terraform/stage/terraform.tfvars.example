@@ -8,4 +8,3 @@ subnet_id                = "<subnet_id>"
 service_account_key_file = "./key.json.example"
 app_disk_image           = "sdsdsadsad"
 db_disk_image            = "sdsdsadsad"
-
