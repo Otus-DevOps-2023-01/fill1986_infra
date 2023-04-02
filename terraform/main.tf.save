@@ -1,0 +1,74 @@
+terraform {
+  required_providers {
+    yandex = {
+      source = "yandex-cloud/yandex"
+    }
+  }
+  required_version = ">= 0.13"
+}
+
+provider "yandex" {
+  token     = "y0_AgAAAAAAWSekAATuwQAAAADdTeaOl79Um1BwTVyVZuoRLLzGoS-q9ts"
+  cloud_id  = "b1gik2rja91muq6ef34j"
+  folder_id = "b1gg93llc2g1rn01q1ar"
+  zone      = "ru-central1-a"
+}
+
+resource "yandex_compute_instance" "app" {
+name = "reddit-app"
+resources {
+cores = 1
+memory = 2
+}
+boot_disk {
+initialize_params {
+# Указать id образа созданного в предыдущем домашнем задании
+image_id = "fd8fg4r8mrvoq6q2ve76"
+}
+}
+network_interface {
+# Указан id подсети default-ru-central1-a
+subnet_id = fd8fg4r8mrvoq6q2ve76"e9bem33uhju28r5i7pnu"
+nat = true
+}
+
+resource "yandex_compute_instance" "app" {
+name = "reddit-app"
+resources {
+cores = 1
+memory = 2
+}
+boot_disk {
+initialize_params {
+image_id = "fd8fg4r8mrvoq6q2ve76"
+}
+}
+network_interface {
+# id подсети default-ru-central1-a
+#subnet_id = "e9bem33uhju28r5i7pnu"
+subnet_id = "e9bcp3gm6ajj2nivkhfp"
+nat = true
+}
+
+}
+resource "yandex_compute_instance" "app" {
+  name = "reddit-app"
+
+  resources {
+    cores  = 1
+    memory = 2
+  }
+
+  boot_disk {
+    initialize_params {
+      # Указать id образа созданного в предыдущем домашем задании
+      image_id = "fd8fg4r8mrvoq6q2ve76"
+    }
+  }
+
+  network_interface {
+    # Указан id подсети default-ru-central1-a
+    subnet_id = "e9bem33uhju28r5i7pnu"
+    nat       = true
+  }
+}

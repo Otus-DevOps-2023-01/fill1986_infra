@@ -1,13 +1,18 @@
-{   
+{   "variables":
+    {
+        "token": "{{env `YC_TOKEN`}}",
+        "folder_id": "{{env `YC_FOLDER`}}",
+        "service_account_key_file": "./key.json"
+    },
     "builders": [
         {
             "type": "yandex",   
             "service_account_key_file": "{{user `service_account_key_file`}}",
-            "folder_id": "{{user `folder_id`}}",
-            "source_image_family": "{{user `source_image_family`}}",
-            "image_name": "reddit-base-{{timestamp}}",
+            "folder_id": "b1gg93llc2g1rn01q1ar",
+            "source_image_family": "ubuntu-1604-lts",
+            "image_name": "reddit-db-base",
             "image_family": "reddit-base",
-            "image_description": "Ubuntu with Ryby and MongoDB",
+            "image_description": "Ubuntu wit MongoDB",
             "use_ipv4_nat": true,
             "ssh_username": "ubuntu",
             "platform_id": "standard-v1"
@@ -16,15 +21,9 @@
     "provisioners": [
         {
             "type": "shell",
-            "script": "scripts/install_ruby.sh",
-            "execute_command": "sudo {{.Path}}",
-            "pause_before": "30s"
-        },
-        {
-            "type": "shell",
             "script": "scripts/install_mongodb.sh",
             "execute_command": "sudo {{.Path}}",
-            "pause_before": "30s"
+            "pause_before": "20s"
         }
     ]
 }
