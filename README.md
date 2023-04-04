@@ -1,12 +1,10 @@
 # fill1986_infra
 fill1986 Infra repository
 
-
 ## Homework Ansible
-Установлен Ansible 3.1.2
-Написан простой playbook для клонирования приложения из репозитория на
-удаленный инстанс
-$ansible-playbook clone.yml
+
+Установлен Ansible 3.1.2 Написан простой playbook для клонирования приложения из репозитория на удаленный инстанс $ansible-playbook clone.yml
+
 
 ## Homework Terraform--2
 Инфраструктура разибта на модули db и app, для создания соответствующих инстансов.
