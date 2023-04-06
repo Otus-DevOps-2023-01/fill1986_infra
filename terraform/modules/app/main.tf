@@ -1,11 +1,11 @@
-terraform {
-  required_providers {
-    yandex = {
-      source = "yandex-cloud/yandex"
-    }
-  }
-  required_version = ">= 0.13"
-}
+#terraform {
+#  required_providers {
+#    yandex = {
+#      source = "yandex-cloud/yandex"
+#    }
+#  }
+#  required_version = ">= 0.13"
+#}
 
 
 resource "yandex_compute_instance" "app" {
@@ -36,3 +36,4 @@ resource "yandex_compute_instance" "app" {
   ssh-keys = "ubuntu:${file(var.public_key_path)}"
   }
 }
+
