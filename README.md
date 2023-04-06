@@ -2,6 +2,7 @@
 fill1986 Infra repository
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Homework Ansible
 
 Установлен Ansible 3.1.2 Написан простой playbook для клонирования приложения из репозитория на удаленный инстанс $ansible-playbook clone.yml
@@ -39,6 +40,8 @@ http://external_ip_address_app:9292
 
 ||||||| d901fd3
 =======
+||||||| merged common ancestors
+<<<<<<<<< Temporary merge branch 1
 ## Homework Terraform--2
 Инфраструктура разибта на модули db и app, для создания соответствующих инстансов.
 Для кажого истанса такде подготовлен совой образ.
@@ -69,7 +72,55 @@ ssh ubuntu@<внешний_IP>
 http://external_ip_address_app:9292
 
 
+||||||||| d901fd3
+=========
+## Homework Ansible
+
+Установлен Ansible 3.1.2 Написан простой playbook для клонирования приложения из репозитория на удаленный инстанс $ansible-playbook clone.yml
+
+
+=======
+## Homework Ansible
+
+Установлен Ansible 3.1.2 Написан простой playbook для клонирования приложения из репозитория на удаленный инстанс $ansible-playbook clone.yml
+
+>>>>>>> bdce69e1cccc2ca08151eeeba14492ac6c11a0a6
+## Homework Terraform--2
+Инфраструктура разибта на модули db и app, для создания соответствующих инстансов.
+Для кажого истанса такде подготовлен совой образ.
+Проверен доступ к инстансам по ssh.
+
+## Homework Terraform--1
+Установлен terraform v1.4.2
+Создан конф. файл maint.tf в котором задикларированна инфраструктура YC и в качестве образа используется ранее созданный с помощью Packer шаблон.  
+
+Для управления ресурсами YC добавлен модуль provider yandex v0.87.0, в котором также заданы ключи для подключения Terraform r YC.
+
+Дополнительно в разделе *provisioner* файла main.tf определен порядок установки и запуска сервиса *puma*. Порядок подключения провижионеров определен в разделе *connection*.
+
+Запуск создания инстанса 
+```
+$ terraform apply
+```
+
+
+чтобы удобней искать назначенный IP в выводимой информации, c помощью файла outputs.tf настроен вывод IP после создания инстанса.
+
+Для проверки подключения к созданному инстансу:
+```
+ssh ubuntu@<внешний_IP>
+```
+
+Проверка работы приложения:
+http://external_ip_address_app:9292
+
+
+<<<<<<< HEAD
 >>>>>>> 99df6b7f6e98b62fac6ce73edd54a823bc75acde
+||||||| merged common ancestors
+>>>>>>>>> Temporary merge branch 2
+=======
+>>>>>>> bdce69e1cccc2ca08151eeeba14492ac6c11a0a6
 
 ## Homework Packer
 
