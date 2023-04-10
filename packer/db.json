@@ -10,7 +10,7 @@
             "service_account_key_file": "{{user `service_account_key_file`}}",
             "folder_id": "b1gg93llc2g1rn01q1ar",
             "source_image_family": "ubuntu-1604-lts",
-            "image_name": "reddit-db-base",
+            "image_name": "reddit-db-ansb",
             "image_family": "reddit-base",
             "image_description": "Ubuntu wit MongoDB",
             "use_ipv4_nat": true,
@@ -20,10 +20,8 @@
     ],
     "provisioners": [
         {
-            "type": "shell",
-            "script": "scripts/install_mongodb.sh",
-            "execute_command": "sudo {{.Path}}",
-            "pause_before": "20s"
+            "type": "ansible",
+            "playbook_file": "ansible/packer_db.yml"
         }
     ]
 }
