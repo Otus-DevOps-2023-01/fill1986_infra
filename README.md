@@ -1,8 +1,14 @@
 # fill1986_infra
 fill1986 Infra repository
 
-## Homework Ansible
 
+## Homework Ansible-2
+Созданы отдельные плейбуки(app.yml, db.yml, deploy.yml) для управления соответствующей инфраструктурой. Упрвеление всей инфоаструктурой осуществляется с помощью главного плейбука site.yml, в который включены все перечисленные плейбуки.
+```
+$ ansible-playbook site.yml
+```
+
+## Homework Ansible
 Установлен Ansible 3.1.2 Написан простой playbook для клонирования приложения из репозитория на удаленный инстанс $ansible-playbook clone.yml
 
 ## Homework Terraform--2
@@ -33,7 +39,6 @@ ssh ubuntu@<внешний_IP>
 
 Проверка работы приложения:
 http://external_ip_address_app:9292
-
 
 
 ## Homework Packer

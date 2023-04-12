@@ -5,3 +5,4 @@ packer/key.json
 *.tfstate.backup
 *.tfvars
 .terraform/
+*.retry
