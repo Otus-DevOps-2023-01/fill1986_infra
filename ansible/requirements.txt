@@ -1,2 +1,1 @@
-requirements
-
+ansible>=2.4

@@ -1,5 +1,6 @@
 # fill1986_infra
 fill1986 Infra repository
+
 ## Homework Ansible-3
 Созданы отдельные роли для app и db c описанием таксков, хендлеров и тд.
 
@@ -8,13 +9,12 @@ fill1986 Infra repository
 Поключена для кофигурирования nginx, коммьюнити роль nginx (jdauphant.nginx)
 
 Для создания пользоватейлей добавлен плейбук users, креды создаваемых пользователей описаны в credentials.yml и зашифорованы с помощью Ansile Vault.
+
 ## Homework Ansible-2
 Созданы отдельные плейбуки(app.yml, db.yml, deploy.yml) для управления соответствующей инфраструктурой. Упрвеление всей инфоаструктурой осуществляется с помощью главного плейбука site.yml, в который включены все перечисленные плейбуки.
 ```
 $ ansible-playbook site.yml
 ```
-
-## Homework Ansible
 
 ## Homework Ansible
 Установлен Ansible 3.1.2 Написан простой playbook для клонирования приложения из репозитория на удаленный инстанс $ansible-playbook clone.yml
@@ -47,7 +47,6 @@ ssh ubuntu@<внешний_IP>
 
 Проверка работы приложения:
 http://external_ip_address_app:9292
-
 
 
 ## Homework Packer
