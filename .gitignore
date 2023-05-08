@@ -7,3 +7,4 @@ packer/key.json
 .terraform/
 jdauphant.nginx
 vault.key
+*.retry
