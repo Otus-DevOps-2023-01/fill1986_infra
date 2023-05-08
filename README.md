@@ -1,6 +1,26 @@
 # fill1986_infra
 fill1986 Infra repository
 
+## Homework Ansible-4
+
+На лок. машине установлен пакет Vagrant, для него в качестве провайдера управления и создания VM используем установленный VitualBox. 
+Описание характеристик создаваемых VM указаны в файле Vagrantfile 
+Порядок запуска тасков описан в main.yml ролей db и app.
+Для тестирования ролей установлены необходимые компоненты Molecule, Testinfra (requirements.txt).
+
+создание VM для проверки роли:
+```
+$ molecule create
+```
+применить конфигурацию (playbook.yml):
+```
+$ molecule converge
+```
+прогнать тесты (test/test_default.py):
+```
+$ molecule verify
+```
+
 ## Homework Ansible-3
 Созданы отдельные роли для app и db c описанием таксков, хендлеров и тд.
 
